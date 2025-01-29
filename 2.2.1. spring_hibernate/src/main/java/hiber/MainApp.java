@@ -32,7 +32,7 @@ public class MainApp {
          System.out.println(user.getCar().toString());
          System.out.println();
       }
-      System.out.println(userService.getUserWithCar("BMW x5" , 1234_56789).toString());
+      System.out.println(userService.getUserByModelAndCar("BMW x5" , 1234_56789).toString());
       context.close();
    }
 }
