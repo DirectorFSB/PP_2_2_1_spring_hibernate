@@ -35,7 +35,7 @@ public class UserServiceImp implements UserService {
    @Override
    public User getUserByModelAndCar(String model,int series){
 
-      return sessionFactory.getCurrentSession().createQuery("from User as u where u.car = (from Car where model = :model and series = :series)" , User.class).setParameter("model",model).setParameter("series",series).getSingleResult();
+      return userDao.getUserByModelandSeries(model , series);
    }
 
 }
